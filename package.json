@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "express-fileupload": "^1.5.1"
+  },
+  "name": "spotify-mern",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "npm start --prefix backend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
