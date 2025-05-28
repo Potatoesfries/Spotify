@@ -15,7 +15,8 @@ export const requireAdmin = async (req, res, next)=>{
         // this is how to get current user
         const currentUser = await clerkClient.users.getUser(req.auth.userId)
         // check if the user is admin or not by check the current user email with the admin email we saved in the .env file
-        const isAdmin = process.env.ADMIN_EMAIL === currentUser.primaryEmailAddress?.emailAddress
+        const isAdmin = currentUser.primaryEmailAddress?.emailAddress === process.env.ADMIN_EMAIL || 
+                currentUser.primaryEmailAddress?.emailAddress === process.env.ADMIN_EMAIL2
         // if it is not then it return the error it is not 
         if(!isAdmin){
             return res.status(403).json({message: "Unauthorized- you must be admin"})
