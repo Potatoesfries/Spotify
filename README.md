@@ -1,3 +1,6 @@
+# Spotify_Clone
+## This application is just like spotify but with message functionality as well
+
 This is a preview for the application.
 ![Listen](Resources/Listen.gif)
 
